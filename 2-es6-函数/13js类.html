@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1.快速了解用es5创建类
+   /*  function Plane(numEngines) {
+            this.numEngines = numEngines;
+            this.enginesActive = false;
+        }
+
+        // methods "inherited" by all instances
+        Plane.prototype.startEngines = function () {
+            console.log('starting engines...');
+            this.enginesActive = true;
+        };
+
+        const richardsPlane = new Plane(1);
+        richardsPlane.startEngines();
+
+        const jamesPlane = new Plane(4);
+        jamesPlane.startEngines(); */
+
+
+        //2.es6类
+       /*  构造函数中所有的东西现在被放置到了一个名为constructor的方法中，当一个新的对象
+       通过这个类创建时，constructor方法将会自动运行，如果创建对象时需要一些数据，那么这些数据都要
+       包括在这里，所以在创建一个对象时要特别注意，现在所有对象的额继承的方法都将放置在这个类中，
+        */
+
+        class Plane {
+                constructor(numEngines) {
+                    this.numEngines = numEngines;
+                    this.enginesActive = false;
+                }
+/* 通过预置类方法写成的startEngine存在于原型中，现在他将存在于类中，但是从功能上来说是一样的
+同样的startEngines和constructor方法看起来是同一种方法，但是constructor方法不在原型上 
+它是存在于类中，一个新的特殊方法 用来初始化新对象 */
+                startEngines() {
+                    console.log('starting engines…');
+                    this.enginesActive = true;
+                }
+            }
+
+
+            const jamesPlane = new Plane(4);
+            console.log(jamesPlane)
+                jamesPlane.startEngines();
+</script>
+</html>

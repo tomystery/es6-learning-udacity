@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*  function createGrid([width = 5, height = 5]) {
+             return `Generates a ${width} x ${height} grid`;
+         }
+ 
+        console.log(createGrid([])) ; // Generates a 5 x 5 grid
+         createGrid([2]); // Generates a 2 x 5 grid
+         createGrid([2, 3]); // Generates a 2 x 3 grid
+         createGrid([undefined, 3]); // Generates a 5 x 3 grid */
+
+    /* function houseDescriptor([houseColor = 'green', shutterColors = ['red']]) {
+        return `I have a ${houseColor} house with ${shutterColors.join(' and ')} shutters`;
+    }
+    console.log(houseDescriptor(['green']));
+ */
+
+    /*  因为 houseDescriptor 预期只传入一个参数（数组），因此选项 1 不对，它调用函数时传入了两个参数。
+         选项 2 正确。
+         选项 3 调用函数传入了一个数组参数，但是列表中的第二项是字符串，而.join() 不是字符串方法，因此代码会出现错误。
+         选项 4 正确。 */
+
+    function buildHouse({ floors=3, color= 'red', walls='brick'}={}) {
+        return `Your house has ${floors} floor(s) with ${color} ${walls} walls`
+    }
+
+
+</script>
+
+</html>
