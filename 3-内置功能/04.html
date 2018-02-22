@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /* const digits = [0, 11, 22, 33, 44, 5, 6, 7, 8, 9];
+    const arrayIterator = digits[Symbol.iterator]();
+    console.log(arrayIterator)
+    console.log(arrayIterator.next());
+    console.log(arrayIterator.next());
+    console.log(arrayIterator.next()); */
+
+
+    /* const james = {
+            name: 'James',
+            height: `5'10"`,
+            weight: 185
+        };
+
+const iterator = james[Symbol.iterator](); */
+    //
+    // console.log(iterator.next().value); // 'James'
+    // console.log(iterator.next().value); // `5'10`
+    // console.log(iterator.next().value); // 185
+
+
+    /*  let arr = ["1", "2", "3"];
+     console.log(Object.keys(arr)); */
+
+
+    /* Object 对象 */
+    /* let obj = { foo: "bar", baz: 42 }
+    console.log(Object.keys(obj)); */
+
+    /*   const games = new Set(['Super Mario Bros.', 'Banjo-Kazooie', 'Mario Kart', 'Super Mario Bros.']);
+  
+          games.add('Banjo-Tooie');
+          console.log(games.add('Age of Empires'));
+          console.log(games.delete('Super Mario Bros.'));
+  
+          console.log(games); */
+
+
+    /*  const months = new Set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+     console.log(months.values());
+     console.log(months.keys()); */
+
+    /*  const myFavoriteFlavors = new Set()
+     console.log(myFavoriteFlavors);//set {}
+     myFavoriteFlavors.add("chocolate chip")
+     myFavoriteFlavors.add("cookies and cream")
+     myFavoriteFlavors.add("strawberry")
+     myFavoriteFlavors.add("vanilla")
+     myFavoriteFlavors.delete("vanilla")
+     console.log(myFavoriteFlavors); */
+
+    /* const uniqueFlavors=new WeakSet();
+    const flavor1= { flavor: 'chocolate' };
+    const flavor2= { flavor: 'ice cream' };
+    uniqueFlavors.add(flavor1);
+    uniqueFlavors.add(flavor2);
+     uniqueFlavors.add(flavor1);
+     console.log(uniqueFlavors); */
+
+
+    /* const members = new Map();
+    console.log(members);
+    members.set('Evelyn', 75.68);
+    members.set('Liam', 20.16);
+    members.set('Sophia', 0);
+    members.set('Marcus', 10.25);
+
+    console.log(members);
+
+    for (const member of members) {
+        // console.log(key, value);
+        const [x, y] = member;
+        console.log(x)
+    } */
+
+    const book1 = { title: 'Pride and Prejudice', author: 'Jane Austen' };
+    const book2 = { title: 'The Catcher in the Rye', author: 'J.D. Salinger' };
+    const book3 = { title: "Gulliver's Travels", author: 'Jonathan Swift' };
+
+    const library = new WeakMap();
+    library.set(book1, true);
+    library.set(book2, false);
+    library.set(book3, true);
+
+    console.log(library);
+    book1 = null;
+    console.log(library);
+</script>
+
+</html>

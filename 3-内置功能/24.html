@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*  function getEmployee() {
+         console.log('the function has started');
+ 
+         const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
+ 
+         for (const name of names) {
+             console.log(name);
+         }
+ 
+         console.log('the function has ended');
+     }
+ 
+     getEmployee(); */
+
+
+
+
+
+
+
+    /* 如果你想先输出前三名员工的姓名，然后停止一段时间，
+    稍后再从停下的地方继续输出更多员工的姓名呢？
+    普通函数无法这么做，因为无法中途“暂停”运行函数。 */
+
+    /* function* getEmployee() {
+        console.log('the function has started');
+
+        const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
+
+        for (const name of names) {
+            console.log(name);
+        }
+
+        console.log('the function has ended');
+    }
+    const generatorIterator = getEmployee();
+    generatorIterator.next(); */
+
+
+
+
+
+
+
+
+
+    /* function* getEmployee() {
+        console.log('the function has started');
+
+        const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
+
+        for (const name of names) {
+            console.log(name);
+            yield;
+        }
+
+        console.log('the function has ended');
+    }
+
+    const generatorIterator = getEmployee();
+    generatorIterator.next();
+    generatorIterator.next(); */
+
+
+
+
+
+
+    //向外面的世界生成数据  我们不再向控制台输出姓名并暂停，而是让代码返回姓名并暂停。
+    /*  function* getEmployee() {
+         console.log('the function has started');
+ 
+         const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
+ 
+         for (const name of names) {
+             yield name;
+         }
+ 
+         console.log('the function has ended');
+     }
+     const generatorIterator = getEmployee();
+     let result = generatorIterator.next();
+     console.log(result.value) // is "Amanda"
+ 
+     console.log(generatorIterator.next().value)  // is "Diego"
+     console.log(generatorIterator.next().value)  // is "Farrin"
+  */
+
+
+
+
+
+    function* udacity() {
+        yield 'Richard';
+        yield 'James'
+    }
+
+    const generatorIterator = udacity();
+    let result = generatorIterator.next();
+    console.log(result.value)
+    /* 它被调用的次数将比生成器函数中的 yield 表达式的数量多一次。
+    对.next() 的第一次调用将启动该函数，并运行为第一个 yield
+    对.next() 的第二次调用将从暂停的地方继续，并运行第二个 yield。
+    对.next() 的第三次（即最后一次）调用将再次从暂停的地方继续，并运行到函数结尾处。 */
+
+</script>
+
+</html>

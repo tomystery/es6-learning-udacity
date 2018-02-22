@@ -1,0 +1,2 @@
+#map
+我们刚看了Set和WeakSet,接下来我们看看Map和WeakMap,Map和WeakMap在很多方面与set和WeakSet相同。它们都有类似的属性和方法。Map和Set都是可迭代的 这意味着你可以循环遍历它们，而weakMap和WeakSet不会阻止对象被当做垃圾回收，但是Map是唯一的 因为它们是键值对的集合，而Set是唯一值的集合，你可以说sets类似于数组，而maps类似于对像。

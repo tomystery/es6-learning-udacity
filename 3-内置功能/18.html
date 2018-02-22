@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   const myPromiseObj= new Promise(function (resolve,reject) {
+            window.setTimeout(function createSundae(flavor = 'chocolate') {
+                const sundae = {};
+                // request ice cream
+                // get cone
+                // warm up ice cream scoop
+                // scoop generous portion into cone!
+                if(/* iceCreamConeIsEmpty(flavor) */){
+                    reject(`sorry,we're out of that flavor`)
+                }
+                resolve(sundae);
+
+            }, Math.random() * 2000);
+        });
+</script>
+</html>

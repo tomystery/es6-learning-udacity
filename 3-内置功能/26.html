@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+     /* //我们可以使用关键字 yield 从生成器中获取数据。我们还可以将数据发送回生成器中。方式是使用 .next() 方法：
+     function* displayResponse() {
+         const response = yield;
+         console.log(`Your response is "${response}"!`);
+     }
+ 
+     const iterator = displayResponse();
+ 
+     iterator.next(); // starts running the generator function
+     iterator.next('Hello Udacity Student'); // send data into the generator
+ // the line above logs to the console: Your response is "Hello Udacity Student"! */
+
+
+
+
+
+
+    function* getEmployee() {
+        const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
+        const facts = [];
+
+        for (const name of names) {
+            // yield *out* each name AND store the returned data into the facts array
+            facts.push(yield name);
+        }
+
+        return facts;
+    }
+
+    const generatorIterator = getEmployee();
+
+    // get the first name out of the generator
+    let name = generatorIterator.next().value;
+    console.log(name);
+
+    // pass data in *and* get the next name
+    name = generatorIterator.next(`${name} is cool!`).value;
+    console.log(name);
+
+    // pass data in *and* get the next name
+    name = generatorIterator.next(`${name} is awesome!`).value;
+
+    // pass data in *and* get the next name
+    name = generatorIterator.next(`${name} is stupendous!`).value;
+
+    // you get the idea
+    name = generatorIterator.next(`${name} is rad!`).value;
+    name = generatorIterator.next(`${name} is impressive!`).value;
+    name = generatorIterator.next(`${name} is stunning!`).value;
+    name = generatorIterator.next(`${name} is awe-inspiring!`).value;
+
+    // pass the last data in, generator ends and returns the array
+    const positions = generatorIterator.next(`${name} is magnificent!`).value;
+
+    // displays each name with description on its own line
+    positions.join('\n');
+    console.log(positions)
+
+
+
+
+
+
+
+
+
+    //练习题
+    // 因为第一次调用 .next() 传入了一些数据。但是该数据没有存储在任何位置。最后一次调用 .next() 应该会获得一些数据，因为生成到对 toppings.push() 的最后一次调用中。
+    /* function* createSundae() {
+        const toppings = [];
+
+        toppings.push(yield);
+        toppings.push(yield);
+        toppings.push(yield);
+
+        return toppings;
+    }
+
+    var it = createSundae();
+    it.next('hot fudge');
+    it.next('sprinkles');
+    it.next('whipped cream');
+    it.next(); */
+</script>
+
+</html>

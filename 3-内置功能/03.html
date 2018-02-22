@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const sym1 = Symbol('apple');
+    console.log(sym1);
+
+
+    /* const bowl = {
+            'apple': { color: 'red', weight: 136.078 },
+            'banana': { color: 'yellow', weight: 183.151 },
+            'orange': { color: 'orange', weight: 170.097 },
+            'banana': { color: 'yellow', weight: 176.845 }
+        };
+        console.log(bowl); */
+
+
+        const bowl = {
+                [Symbol('apple')]: { color: 'red', weight: 136.078 },
+                [Symbol('banana')]: { color: 'yellow', weight: 183.15 },
+                [Symbol('orange')]: { color: 'orange', weight: 170.097 },
+                [Symbol('banana')]: { color: 'yellow', weight: 176.845 }
+            };
+            console.log(bowl);
+</script>
+
+</html>
