@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        .mouth {
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #F00;
+            display: block;
+            width: 50px;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example">
+        <span class="mouth">09</span>
+    </div>
+</body>
+<script>
+    if (!String.prototype.startsWith) {
+        String.prototype.startsWith = function (searchString, position) {
+            position = position || 0;
+            return this.substr(position, searchString.length) === searchString;
+        };
+    }
+
+    console.log('Udacity'.startsWith('Udac'));
+    console.log('Udacity'.startsWith('Udac', 2));
+    console.log('Udacity'.startsWith('ES6'));
+
+</script>
+
+</html>
